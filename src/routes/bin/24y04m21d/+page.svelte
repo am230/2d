@@ -83,6 +83,15 @@
 		/>
 	{/each}
 </main>
+<main class="reflection">
+	{#each layers as layer, i}
+		<img
+			src={layer.src}
+			style={`transform: translate(${layer.pos.x}%, ${layer.pos.y}%) scale(${layer.scale}); opacity: calc(1 / calc(${layer.z} * 0.003 + 1)); z-index: {i};`}
+			alt={`Layer ${i}`}
+		/>
+	{/each}
+</main>
 
 <style lang="scss">
 	:global(body) {
@@ -97,9 +106,18 @@
 		transform: translate(-50%, -50%);
 		width: $size;
 		height: $size;
-		outline: 1px solid #000;
+		outline: 3px solid #000;
+		outline-offset: -1px;
 		overflow: hidden;
 		background: #fff;
+	}
+
+	.reflection {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 25%) rotateX(180deg) scaleY(0.5);
+		opacity: 0.04;
 	}
 
 	img {
