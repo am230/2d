@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "svelte.svelte-vscode",
+        "stylelint.vscode-stylelint",
+        "esbenp.prettier-vscode",
+    ]
+}
