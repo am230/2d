@@ -66,7 +66,7 @@
 				/>
 			</div>
 			<p>このスライダーを調節して</p>
-			<p>左が見えなくなるまで調整してください</p>
+			<p>左だけ見えなくなるまで調整してください</p>
 			<input type="range" min="0" max="50" bind:value={brightness} />
 			<i class="ti ti-arrow-left" />
 			<Delay>
